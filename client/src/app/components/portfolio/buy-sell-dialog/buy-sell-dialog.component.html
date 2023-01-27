@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>{{data.action.toUpperCase()}} {{data.stock.name}}</h1>
+
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Quantity</mat-label>
+    <input matInput type="number" placeholder="1" [(ngModel)]="data.quantity">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Price</mat-label>
+    <input matInput type="number" placeholder="1" [disabled]="!data.isLimit" [(ngModel)]="data.unitPrice">
+  </mat-form-field>
+  <br>
+  <mat-slide-toggle class="example-margin" [(ngModel)]="data.isLimit">
+    Limit Order
+  </mat-slide-toggle>
+  <br>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data" color="primary" cdkFocusInitial>Place Order</button>
+  </div>
+</div>

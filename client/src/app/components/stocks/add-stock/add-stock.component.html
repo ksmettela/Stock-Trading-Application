@@ -1,0 +1,25 @@
+<div>
+  <h4>Add New Stock</h4>
+  <form [formGroup]="stockForm" (ngSubmit)="save()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name:</mat-label>
+      <input matInput placeholder="INFY" formControlName="name" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Initial Price:</mat-label>
+        <input matInput placeholder="100" formControlName="basePrice" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Volume:</mat-label>
+        <input matInput placeholder="100" formControlName="volume" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Stock Ticker:</mat-label>
+        <input matInput placeholder="100" formControlName="margin" required>
+      </mat-form-field>
+  
+    <div>
+    </div>
+    <button mat-raised-button color="primary">Save</button>
+  </form>
+</div>

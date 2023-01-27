@@ -1,0 +1,24 @@
+<p>
+  Can buy and sell stocks at market price.
+  Can buy and sell stocks using limit order.
+  The user will set a desired price to buy or sell the stock and a date when to expire the limit order if it is not
+  fulfilled. The user should also have the option to cancel this order before it gets executed.
+
+</p>
+<h3>Your Available Funds</h3>
+<h1><b>$ {{funds}}</b></h1>
+<mat-tab-group>
+  <mat-tab label="Portfolio">
+    View your current portfolio of stocks and cash.
+    <app-trade type="portfolio"></app-trade>
+  </mat-tab>
+  <mat-tab label="Orders">
+    <app-trade type="transaction"></app-trade>
+  </mat-tab>
+  <mat-tab label="Funds">
+    <app-funds></app-funds>
+  </mat-tab>
+  <mat-tab label="Stocks">
+    <app-list-stock caller="portfolio"></app-list-stock>
+  </mat-tab>
+</mat-tab-group>

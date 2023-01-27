@@ -1,0 +1,5 @@
+com\inspirion\stockmarket\host\Main.class
+com\inspirion\stockmarket\host\CorsHeaders.class
+com\inspirion\stockmarket\controller\TestController.class
+com\inspirion\stockmarket\host\CorsFilter.class
+com\inspirion\stockmarket\host\CustomResourceConfig.class

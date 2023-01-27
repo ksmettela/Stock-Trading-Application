@@ -1,0 +1,11 @@
+{
+  "connection": {
+    "host": "localhost",
+    "database": "postgres",
+    "port": "5432",
+    "userName": "postgres",
+    "password": "postgres",
+    "schema": "stockmarket"
+  },
+  "webPort": 8080
+}

@@ -1,0 +1,14 @@
+<mat-grid-list cols="2" rowHeight="50%">
+  <mat-grid-tile [colspan]='1' [rowspan]='2'>
+    <mat-grid-tile-header> View Stocks</mat-grid-tile-header>
+    <app-list-stock [events]="eventsSubject.asObservable()"></app-list-stock>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]='1' [rowspan]='1'>
+    <mat-grid-tile-header> Add New Stock</mat-grid-tile-header>
+    <app-add-stock></app-add-stock>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]='1' [rowspan]='1'>
+    <mat-grid-tile-header> View Settings</mat-grid-tile-header>
+    <app-setting (reloadStocks)="onReloadStocks()"></app-setting>
+  </mat-grid-tile>
+</mat-grid-list>

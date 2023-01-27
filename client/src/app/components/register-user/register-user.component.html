@@ -1,0 +1,35 @@
+<div>
+  <h2>Hello Welcome </h2>
+  <h4>Create An Account</h4>
+  <form class="example-form" [formGroup]="registerForm" (ngSubmit)="register()">
+    <mat-form-field class="example-full-width">
+      <mat-label>First Name:</mat-label>
+      <input matInput placeholder="John" formControlName="firstname" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Last Name:</mat-label>
+      <input matInput placeholder="Doe" formControlName="lastname" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email:</mat-label>
+      <input matInput placeholder="user@portal.com" formControlName="email" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Password:</mat-label>
+      <input matInput type="password" formControlName="password" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select>
+        <mat-option *ngFor="let wd of codes" [value]="wd">{{wd}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Telephone</mat-label>
+      <input formControlName="phone" required type="tel" matInput placeholder="555-555-1234">
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Submit</button>
+    <p>Already have an account?
+      <a routerLink="/login">signUp</a></p>
+  </form>
+</div>
