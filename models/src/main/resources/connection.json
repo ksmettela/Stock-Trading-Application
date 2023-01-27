@@ -1,0 +1,10 @@
+{
+  "connection": {
+    "host": "localhost",
+    "database": "postgres",
+    "port": "5432",
+    "username": "postgres",
+    "password": "postgres"
+  },
+  "webPort": 8080
+}
